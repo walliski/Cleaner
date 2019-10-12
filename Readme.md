@@ -18,6 +18,13 @@ Currently the binaries are compiled against Metamod:Source 1.10 and Sourcemod 1.
 3. Copy the contents of the `sourcemod` folder into your servers `addons/sourcemod` folder.
 4. (Optional) Modify `addons/sourcemod/configs/cleaner.cfg` with more strings you want removed from console spam.
 
+## Windows binaries
+
+Specific binaries can be compiled with `& "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\msbuild.exe" .\sdk.vcxproj /p:Configuration="Release - CSGO"` if you have Visual Studio and the C++ buildtools installed.
+
+If you want to compile it from inside VS, you have to start VS with environment variables (or use the debug environment in VS, or get them in there
+some other way): `SOURCEMOD=../../sourcemod HL2SDKCSGO=../../hl2sdk start sdk.sln`.
+
 ## Authors
 
 Originally posted by Zephyrus in Alliedmods forums: [Forum post](https://forums.alliedmods.net/showthread.php?t=195008)  

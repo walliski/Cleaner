@@ -25,6 +25,7 @@ env:
     - ENGINE=left4dead2 HL2SDK=l4d2
     - ENGINE=left4dead HL2SDK=l4d
     - ENGINE=css HL2SDK=css
-    - ENGINE=orangeboxvalve HL2SDK=orangebox #Not sure about these at all.
-    - ENGINE=orangebox HL2SDK=sdk2013 #Not sure about these at all.
     - ENGINE=original HL2SDK=episode1 #Not sure about these at all.
+# These two are broken, so lets ignore them for now...
+#    - ENGINE=orangeboxvalve HL2SDK=orangebox #Not sure about these at all.
+#    - ENGINE=orangebox HL2SDK=sdk2013 #Not sure about these at all.

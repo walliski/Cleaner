@@ -15,5 +15,11 @@ script:
 - cd $TRAVIS_BUILD_DIR
 - make
 env:
-  global:
+  matrix:
     - ENGINE=csgo HL2SDK=csgo
+    - ENGINE=left4dead2 HL2SDK=l4d2
+    - ENGINE=left4dead HL2SDK=l4d
+    - ENGINE=css HL2SDK=css
+    - ENGINE=orangeboxvalve HL2SDK=orangebox #Not sure about these at all.
+    - ENGINE=orangebox HL2SDK=sdk2013 #Not sure about these at all.
+    - ENGINE=original HL2SDK=episode1 #Not sure about these at all.

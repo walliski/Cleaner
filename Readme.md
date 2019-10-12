@@ -17,3 +17,9 @@ Currently the binaries are compiled against Metamod:Source 1.10 and Sourcemod 1.
 2. Download the .dll or .so file, and put it into your servers `addons/sourcemod/extensions` folder.
 3. Copy the contents of the `sourcemod` folder into your servers `addons/sourcemod` folder.
 4. (Optional) Modify `addons/sourcemod/configs/cleaner.cfg` with more strings you want removed from console spam.
+
+## Authors
+
+Originally posted by Zephyrus in Alliedmods forums: [Forum post](https://forums.alliedmods.net/showthread.php?t=195008)  
+[Accelerator74](https://github.com/Accelerator74) did some changes to the Makefile etc:
+[Accelerator74/Cleaner](https://github.com/Accelerator74/Cleaner)

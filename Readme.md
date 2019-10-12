@@ -4,7 +4,10 @@ This is an extension for Sourcemod that allows you to strip lines from your cons
 different types of spam messages that are normal, but provide no useful info.
 
 The Linux binaries are being compiled in Travis. You can find the builds here: [Travis](https://travis-ci.com/walliski/Cleaner)  
-The Windows binaries in the `precompiled` folder are compiled by [Accelerator74](https://github.com/Accelerator74) I think.  
+The Windows binaries in the `precompiled` folder are compiled by someone? Think twice if you want to trust them. This repo might get
+Windows binaries compiled by CI at some point also.
+
+Currently the binaries are compiled against Metamod:Source 1.10 and Sourcemod 1.9.
 
 ## Installation
 

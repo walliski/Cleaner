@@ -1144,19 +1144,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\asm\asm.c" />
-    <ClCompile Include="..\CDetour\detours.cpp" />
+    <ClCompile Include="$(SOURCEMOD)\public\asm\asm.c" />
+    <ClCompile Include="$(SOURCEMOD)\public\CDetour\detours.cpp" />
     <ClCompile Include="..\extension.cpp" />
-    <ClCompile Include="..\..\smsdk_ext.cpp" />
+    <ClCompile Include="$(SOURCEMOD)\public\smsdk_ext.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\asm\asm.h" />
-    <ClInclude Include="..\CDetour\detourhelpers.h" />
-    <ClInclude Include="..\CDetour\detours.h" />
+    <ClInclude Include="$(SOURCEMOD)\public\asm\asm.h" />
+    <ClInclude Include="$(SOURCEMOD)\public\CDetour\detourhelpers.h" />
+    <ClInclude Include="$(SOURCEMOD)\public\CDetour\detours.h" />
     <ClInclude Include="..\extension.h" />
-	<ClInclude Include="..\sigs.h" />
+    <ClInclude Include="..\sigs.h" />
     <ClInclude Include="..\smsdk_config.h" />
-    <ClInclude Include="..\..\smsdk_ext.h" />
+    <ClInclude Include="$(SOURCEMOD)\public\smsdk_ext.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

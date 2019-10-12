@@ -1,7 +1,6 @@
 # Build files
-Release/CDetour/
-Release/extension.o
-Release/smsdk_ext.o
+Release/
+
 libtier0.so
 libvstdlib.so
 smsdk_ext.cpp

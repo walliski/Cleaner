@@ -5,27 +5,44 @@ compiler:
 - gcc
 os:
 - linux
+
 before_install:
 - sudo apt-get update
 - sudo apt-get install -y gcc-multilib g++-multilib
 - cd $TRAVIS_BUILD_DIR/.. && git clone --recurse-submodules -j8 https://github.com/alliedmodders/sourcemod && cd sourcemod && git checkout $SM_VERSION
 - cd $TRAVIS_BUILD_DIR/.. && git clone https://github.com/alliedmodders/metamod-source.git mmsource && cd mmsource && git checkout $MM_VERSION
 - cd $TRAVIS_BUILD_DIR/.. && git clone https://github.com/alliedmodders/hl2sdk
+
 script:
-- cd $TRAVIS_BUILD_DIR/../hl2sdk && git checkout $HL2SDK
-- cd $TRAVIS_BUILD_DIR
-- make
+- cd $TRAVIS_BUILD_DIR/
+- ENGINE=csgo HL2SDK=csgo ./scripts/travisBuild.sh
+- ENGINE=left4dead2 HL2SDK=l4d2 ./scripts/travisBuild.sh
+- ENGINE=left4dead HL2SDK=l4d ./scripts/travisBuild.sh
+- ENGINE=css HL2SDK=css ./scripts/travisBuild.sh
+- ENGINE=original HL2SDK=episode1 ./scripts/travisBuild.sh #Not sure about this HL2SDK
+# These two are broken, so lets ignore them for now...
+# - ENGINE=orangeboxvalve HL2SDK=orangebox ./scripts/travisBuild.sh #Not sure about this HL2SDK
+# - ENGINE=orangebox HL2SDK=sdk2013 ./scripts/travisBuild.sh #Not sure about this HL2SDK
+- ls -la $TRAVIS_BUILD_DIR/Release
+
 env:
   global:
     - MM_VERSION=1.10-dev
     - SM_VERSION=1.9-dev
 
-  matrix:
-    - ENGINE=csgo HL2SDK=csgo
-    - ENGINE=left4dead2 HL2SDK=l4d2
-    - ENGINE=left4dead HL2SDK=l4d
-    - ENGINE=css HL2SDK=css
-    - ENGINE=original HL2SDK=episode1 #Not sure about these at all.
-# These two are broken, so lets ignore them for now...
-#    - ENGINE=orangeboxvalve HL2SDK=orangebox #Not sure about these at all.
-#    - ENGINE=orangebox HL2SDK=sdk2013 #Not sure about these at all.
+before_deploy:
+- cd $TRAVIS_BUILD_DIR/
+- mkdir -p binaries
+- cp Release/*.so binaries
+- tar -czf release.tar.gz binaries sourcemod Readme.md
+
+deploy:
+  provider: releases
+  api_key:
+    secure: DL+HGg86pdco0FyQ2V8Ahnl8mtHZopgeD8MvZKigUHBqBFeu4Nn8v52qlssuxHZiM4RX/YHO+qUOwKMntk/QxDiI5A4cI3jJAKp25UM7YJzZJzKUrG+QD39fiKtV7SlpV2JuAKYY1GF77IESE9G4vmo6KY3LENMrZaZjTCH3J47fSVgeda341CxvyxLHPmnPpYOXHK4umqDEwNdrdCU3WsCdWAMX5DgDlUxS9jH4FgVQRrfh8HPLAwdpe1au+RCBNQQ5tfZm+BAFdDKFu6dlRM4SrUdc8x0DNdyFXSX0vZPrLZgXkobCg+/5ANw5lj/L69GjqBcIO5tFXTfz2ygs/wDSzTn7AVZD+7A/zKrmd2obqUHppySMTnGuNMFjRhTV0Y/wdtaw1eyLH3+7kBqSNBLM0OGdvWlzKIUchFdt+3O/U/O9B/kfBzTeQWAb467OkKkgtl6amhxiZfAyh3bvZ6gHTcnoeVMkNFDn877NjS7JVyHXSbTSb4IkOxTUAaAMK451IwP7eSmTL7REkummbs6FI8ifqJLdPeg/YmTT4yIA7cUopknhCEaKip5As4vTvnzLR0z2XJsSDV1vKtZzjTr5IpWbepWQ0IrhgTuyjrIVRZitJyyXt1bx9fsYIVq+yIxwmDb16wMZoAGtXCAUFYqOPdZYY3yjL9w9aU4LAPA=
+  skip_cleanup: true
+  file: release.tar.gz
+  on:
+    repo: walliski/Cleaner
+    branch: master
+    tags: true

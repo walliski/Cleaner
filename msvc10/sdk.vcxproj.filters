@@ -18,40 +18,40 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\asm\asm.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CDetour\detours.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\extension.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\smsdk_ext.cpp">
-      <Filter>SourceMod SDK</Filter>
+    <ClCompile Include="$(SOURCEMOD)\public\asm\asm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SOURCEMOD)\public\CDetour\detours.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SOURCEMOD)\public\smsdk_ext.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\asm\asm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CDetour\detourhelpers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CDetour\detours.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\extension.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-	<ClInclude Include="..\sigs.h">
+    <ClInclude Include="..\sigs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\smsdk_config.h">
       <Filter>SourceMod SDK</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\smsdk_ext.h">
-      <Filter>SourceMod SDK</Filter>
+    <ClInclude Include="$(SOURCEMOD)\public\asm\asm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SOURCEMOD)\public\CDetour\detourhelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SOURCEMOD)\public\CDetour\detours.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SOURCEMOD)\public\smsdk_ext.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

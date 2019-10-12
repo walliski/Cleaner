@@ -2,14 +2,14 @@
 # Makefile written by David "BAILOPAN" Anderson
 
 SMSDK = ../sourcemod
-HL2SDK_ORIG = ../../hl2sdk
-HL2SDK_OB = ../../hl2sdk-ob
-HL2SDK_CSS = ../hl2sdk-css
-HL2SDK_OB_VALVE = ../hl2sdk-tf2
-HL2SDK_L4D = ../hl2sdk-l4d
+HL2SDK_ORIG = ../hl2sdk
+HL2SDK_OB = ../hl2sdk
+HL2SDK_CSS = ../hl2sdk
+HL2SDK_OB_VALVE = ../hl2sdk
+HL2SDK_L4D = ../hl2sdk
 HL2SDK_L4D2 = ../hl2sdk
-HL2SDK_CSGO = ../hl2sdk-csgo
-MMSOURCE19 = ../mmsource110
+HL2SDK_CSGO = ../hl2sdk
+MMSOURCE19 = ../mmsource
 
 #####################################
 ### EDIT BELOW FOR OTHER PROJECTS ###
@@ -111,7 +111,7 @@ endif
 
 INCLUDE += -I. -I.. -I$(HL2PUB) -I$(HL2PUB)/engine -I$(HL2PUB)/tier0 \
 	-I$(HL2PUB)/tier1 -I$(METAMOD) -I$(METAMOD)/sourcehook -I$(SMSDK)/public -I$(SMSDK)/public/extensions \
-	-I$(SMSDK)/public/CDetour -I$(SMSDK)/public/asm -I$(SMSDK)/sourcepawn/include
+	-I$(SMSDK)/public/CDetour -I$(SMSDK)/public/asm -I$(SMSDK)/public/amtl/amtl -I$(SMSDK)/public/amtl -I$(SMSDK)/sourcepawn/include
 
 LINK += $(HL2LIB)/tier1_i486.a $(LIB_PREFIX)vstdlib$(LIB_SUFFIX) $(LIB_PREFIX)tier0$(LIB_SUFFIX)
 

@@ -2,13 +2,13 @@
 # Makefile written by David "BAILOPAN" Anderson
 
 SMSDK = ../sourcemod
-HL2SDK_ORIG = ../../hl2sdk
-HL2SDK_OB = ../../hl2sdk-ob
-HL2SDK_CSS = ../hl2sdk-css
-HL2SDK_OB_VALVE = ../hl2sdk-tf2
-HL2SDK_L4D = ../hl2sdk-l4d
+HL2SDK_ORIG = ../hl2sdk
+HL2SDK_OB = ../hl2sdk
+HL2SDK_CSS = ../hl2sdk
+HL2SDK_OB_VALVE = ../hl2sdk
+HL2SDK_L4D = ../hl2sdk
 HL2SDK_L4D2 = ../hl2sdk
-HL2SDK_CSGO = ../hl2sdk-csgo
+HL2SDK_CSGO = ../hl2sdk
 MMSOURCE19 = ../mmsource110
 
 #####################################

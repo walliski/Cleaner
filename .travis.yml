@@ -32,8 +32,9 @@ env:
 
 before_deploy:
 - cd $TRAVIS_BUILD_DIR/
-- ./scripts/travisPrepareRelease.sh
-- tar -czf release.tar.gz staging/*
+- mkdir -p binaries
+- cp Release/*.so binaries
+- tar -czf release.tar.gz binaries sourcemod Readme.md
 
 deploy:
   provider: releases

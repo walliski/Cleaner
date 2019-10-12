@@ -8,7 +8,8 @@ os:
 before_install:
 - sudo apt-get update
 - sudo apt-get install -y gcc-multilib g++-multilib
-- cd .. && git clone --recurse-submodules -j8 https://github.com/alliedmodders/sourcemod
-- cd .. && git clone https://github.com/alliedmodders/hl2sdk
+- cd $TRAVIS_BUILD_DIR/.. && git clone --recurse-submodules -j8 https://github.com/alliedmodders/sourcemod
+- cd $TRAVIS_BUILD_DIR/.. && git clone https://github.com/alliedmodders/hl2sdk
 script:
+- cd $TRAVIS_BUILD_DIR
 - ENGINE=csgo make

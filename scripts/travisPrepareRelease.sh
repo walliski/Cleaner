@@ -10,3 +10,4 @@ cp Release/*.so staging
 cp -r sourcemod/ staging
 
 ls -la staging
+

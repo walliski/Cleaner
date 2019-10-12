@@ -9,7 +9,7 @@ HL2SDK_OB_VALVE = ../hl2sdk
 HL2SDK_L4D = ../hl2sdk
 HL2SDK_L4D2 = ../hl2sdk
 HL2SDK_CSGO = ../hl2sdk
-MMSOURCE19 = ../mmsource110
+MMSOURCE19 = ../mmsource
 
 #####################################
 ### EDIT BELOW FOR OTHER PROJECTS ###

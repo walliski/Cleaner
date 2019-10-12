@@ -42,7 +42,7 @@ deploy:
     secure: DL+HGg86pdco0FyQ2V8Ahnl8mtHZopgeD8MvZKigUHBqBFeu4Nn8v52qlssuxHZiM4RX/YHO+qUOwKMntk/QxDiI5A4cI3jJAKp25UM7YJzZJzKUrG+QD39fiKtV7SlpV2JuAKYY1GF77IESE9G4vmo6KY3LENMrZaZjTCH3J47fSVgeda341CxvyxLHPmnPpYOXHK4umqDEwNdrdCU3WsCdWAMX5DgDlUxS9jH4FgVQRrfh8HPLAwdpe1au+RCBNQQ5tfZm+BAFdDKFu6dlRM4SrUdc8x0DNdyFXSX0vZPrLZgXkobCg+/5ANw5lj/L69GjqBcIO5tFXTfz2ygs/wDSzTn7AVZD+7A/zKrmd2obqUHppySMTnGuNMFjRhTV0Y/wdtaw1eyLH3+7kBqSNBLM0OGdvWlzKIUchFdt+3O/U/O9B/kfBzTeQWAb467OkKkgtl6amhxiZfAyh3bvZ6gHTcnoeVMkNFDn877NjS7JVyHXSbTSb4IkOxTUAaAMK451IwP7eSmTL7REkummbs6FI8ifqJLdPeg/YmTT4yIA7cUopknhCEaKip5As4vTvnzLR0z2XJsSDV1vKtZzjTr5IpWbepWQ0IrhgTuyjrIVRZitJyyXt1bx9fsYIVq+yIxwmDb16wMZoAGtXCAUFYqOPdZYY3yjL9w9aU4LAPA=
   skip_cleanup: true
   file: release.tar.gz
-  draft: true
   on:
     repo: walliski/Cleaner
-    branch: release-binaries
+    branch: master
+    tags: true

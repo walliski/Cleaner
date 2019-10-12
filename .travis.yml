@@ -14,6 +14,7 @@ before_install:
 - cd $TRAVIS_BUILD_DIR/.. && git clone https://github.com/alliedmodders/hl2sdk
 
 script:
+- cd $TRAVIS_BUILD_DIR/
 - ENGINE=csgo HL2SDK=csgo ./scripts/travisBuild.sh
 - ENGINE=left4dead2 HL2SDK=l4d2 ./scripts/travisBuild.sh
 - ENGINE=left4dead HL2SDK=l4d ./scripts/travisBuild.sh
@@ -22,7 +23,7 @@ script:
 # These two are broken, so lets ignore them for now...
 # - ENGINE=orangeboxvalve HL2SDK=orangebox ./scripts/travisBuild.sh #Not sure about this HL2SDK
 # - ENGINE=orangebox HL2SDK=sdk2013 ./scripts/travisBuild.sh #Not sure about this HL2SDK
-- ls $TRAVIS_BUILD_DIR/Release
+- ls -la $TRAVIS_BUILD_DIR/Release
 
 env:
   global:

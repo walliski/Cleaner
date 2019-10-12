@@ -11,9 +11,9 @@ before_install:
 - cd $TRAVIS_BUILD_DIR/.. && git clone --recurse-submodules -j8 https://github.com/alliedmodders/sourcemod
 - cd $TRAVIS_BUILD_DIR/.. && git clone https://github.com/alliedmodders/hl2sdk
 script:
-- cd $TRAVIS_BUILD_DIR/../hl2sdk && git checkout $ENGINE
+- cd $TRAVIS_BUILD_DIR/../hl2sdk && git checkout $HL2SDK
 - cd $TRAVIS_BUILD_DIR
 - make
 env:
   global:
-    - ENGINE=csgo
+    - ENGINE=csgo HL2SDK=csgo

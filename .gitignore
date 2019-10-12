@@ -1,0 +1,7 @@
+# Build files
+Release/CDetour/
+Release/extension.o
+Release/smsdk_ext.o
+libtier0.so
+libvstdlib.so
+smsdk_ext.cpp

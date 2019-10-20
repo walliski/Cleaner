@@ -28,7 +28,7 @@ script:
 env:
   global:
     - MM_VERSION=1.10-dev
-    - SM_VERSION=1.9-dev
+    - SM_VERSION=1.10-dev
 
 before_deploy:
 - cd $TRAVIS_BUILD_DIR/

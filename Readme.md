@@ -7,7 +7,7 @@ The Linux binaries are being compiled in Travis. You can find the builds here: [
 The Windows binaries in the `precompiled` folder are compiled by someone? Think twice if you want to trust them. This repo might get
 Windows binaries compiled by CI at some point also.
 
-Currently the binaries are compiled against Metamod:Source 1.10 and Sourcemod 1.9.
+Currently the binaries are compiled against Metamod:Source 1.10 and Sourcemod 1.10.
 
 ## Installation
 
